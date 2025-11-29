@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>QR Scanner</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header>
+    <h1>Scan Ticket</h1>
+    <button onclick="location.href='admin.html'">Back</button>
+</header>
+
+<video id="camera" width="350" style="border-radius:20px;"></video>
+
+<div id="scan-result" class="modal-content" style="max-width:350px;margin-top:20px;">
+    <h3>Status:</h3>
+    <p id="result-text">Waiting for scan...</p>
+</div>
+
+<script src="ui.js"></script>
+<script src="data.js"></script>
+<script src="scanner.js"></script>
+
+</body>
+</html>

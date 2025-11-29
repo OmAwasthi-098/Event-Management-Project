@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>User Profile</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header>
+    <h1>Profile</h1>
+    <div>
+        <button onclick="location.href='index.html'">Back</button>
+        <button onclick="logout()">Logout</button>
+    </div>
+</header>
+
+<div class="modal-content" style="max-width:420px;margin:50px auto;">
+    <h2>Your Profile</h2>
+
+    <img id="profile-avatar" src="" 
+         style="width:120px;height:120px;border-radius:50%;display:block;margin:auto;object-fit:cover;">
+
+    <input id="avatar-input" type="file" accept="image/*" onchange="updateAvatar()" style="margin-top:15px;">
+
+    <input id="profile-name" class="search-box" placeholder="Your Name">
+    <input id="profile-email" class="search-box" readonly>
+
+    <button style="width:100%;" onclick="saveProfile()">Save</button>
+</div>
+
+<script src="ui.js"></script>
+<script src="script.js"></script>
+<script src="auth.js"></script>
+</body>
+</html>

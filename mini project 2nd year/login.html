@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Login - Event Manager</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            background: url('assets/images2.jpg') no-repeat center center fixed;
+            background-size: cover;
+            font-family: Arial, sans-serif;
+        }
+        .main-heading {
+            text-align: center;
+            color: white;
+            font-size: 36px;
+            margin-top: 50px;
+            text-shadow: 2px 2px 6px rgba(0,0,0,0.7);
+        }
+    </style>
+</head>
+<body>
+<h1 class="main-heading">Ignite Event Productions</h1>
+
+<div class="modal-content" style="max-width:380px;margin:50px auto;">
+    <h2 style="text-align:center;">Sign In</h2>
+
+    <input id="email" type="email" placeholder="Email" class="search-box" style="margin-top:20px;">
+    <input id="password" type="password" placeholder="Password" class="search-box">
+    
+    <select id="role" class="search-box">
+        <option value="user">User</option>
+        <option value="admin">Admin</option>
+    </select>
+
+    <button onclick="login()" style="width:100%;margin-top:12px;">Login</button>
+</div>
+
+<script src="auth.js"></script>
+</body>
+</html>

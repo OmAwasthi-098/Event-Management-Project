@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Events - User</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header>
+    <h1>Events</h1>
+    <div>
+        <button onclick="toggleDarkMode()">Theme</button>
+        <button onclick="location.href='my events.html'">My Events</button>
+        <button onclick="logout()">Logout</button>
+        <button onclick="location.href='tickets.html'">My Tickets</button>
+    </div>
+</header>
+
+<input placeholder="Search events..." class="search-box" onkeyup="searchEvents(this.value)">
+
+<div class="category-bar">
+    <div class="chip active" onclick="filterByCategory('all')">All</div>
+    <div class="chip" onclick="filterByCategory('Music')">Music</div>
+    <div class="chip" onclick="filterByCategory('Tech')">Tech</div>
+    <div class="chip" onclick="filterByCategory('Workshop')">Workshop</div>
+    <div class="chip" onclick="filterByCategory('Sports')">Sports</div>
+    <div class="chip" onclick="filterByCategory('Cultural')">Cultural</div>
+</div>
+
+<section id="events-container" class="grid"></section>
+
+<div style="position:fixed;bottom:25px;right:25px;">
+    <button style="border-radius:50%;padding:18px 20px;"
+        onclick="location.href='profile.html'">👤</button>
+</div>
+
+<div id="toast-container"></div>
+
+<script src="ui.js"></script>
+<script src="data.js"></script>
+<script src="script.js"></script>
+<script src="auth.js"></script>
+</body>
+</html>
